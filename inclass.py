@@ -22,3 +22,4 @@ hist_values = np.histogram(
     data['windspeed'], bins=24)[0]
 
 st.bar_chart(hist_values)
+ 
