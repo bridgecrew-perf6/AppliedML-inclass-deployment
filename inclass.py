@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
+# Reference: https://github.com/streamlit/example-app-commenting/blob/main/streamlit_app.py
+def space(num_lines=1):
+    """Adds empty lines to the Streamlit app."""
+    for _ in range(num_lines):
+        st.write("")
+
 st.title('Deployment In-Class Example - CS5394')
 space(2)
 st.title('Button Clicking: ')
@@ -10,12 +17,6 @@ if 'count' not in st.session_state:
 
 def increment_counter():
     st.session_state.count += 1
-    
-# Reference: https://github.com/streamlit/example-app-commenting/blob/main/streamlit_app.py
-def space(num_lines=1):
-    """Adds empty lines to the Streamlit app."""
-    for _ in range(num_lines):
-        st.write("")
 
 st.button('Click Me!', on_click=increment_counter)
 
