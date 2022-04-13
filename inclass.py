@@ -4,7 +4,6 @@ import numpy as np
 
 # For comment section, referenced below
 from datetime import datetime
-from vega_datasets import data
 from utils import db
 
 
