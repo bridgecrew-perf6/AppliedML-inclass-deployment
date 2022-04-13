@@ -1,3 +1,5 @@
 numpy
 pandas
 streamlit
+fake_useragent
+requests
