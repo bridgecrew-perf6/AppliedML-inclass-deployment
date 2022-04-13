@@ -23,7 +23,7 @@ st.button('Click Me!', on_click=increment_counter)
 st.write('Count = ', st.session_state.count)
 
 space(3)
-st.write('Loading & Displaying Data')
+st.title('Loading & Displaying Data')
 
 data = pd.read_csv("./hour.csv")
 st.write(data)
