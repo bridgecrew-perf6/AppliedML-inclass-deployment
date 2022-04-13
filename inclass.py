@@ -34,4 +34,11 @@ hist_values = np.histogram(
     data['windspeed'], bins=24)[0]
 
 st.bar_chart(hist_values)
- 
+
+space(3)
+
+
+# Reference: https://github.com/streamlit/example-app-commenting
+st.title("Comment Section 💬")
+
+
