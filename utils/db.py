@@ -16,7 +16,7 @@ SHEET_NAME = "Comment Section"
 GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
 
 
-@st.experimental_singleton()
+@st.experimental_singleton(suppress_st_warning=True)
 def connect():
     # Create a connection object.
     credentials = service_account.Credentials.from_service_account_info(
