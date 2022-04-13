@@ -17,9 +17,7 @@ st.button('Click Me!', on_click=increment_counter)
 
 st.write('Count = ', st.session_state.count)
 
-DOWNLOAD_ROOT = "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset/hour"
-
-data = pd.read_csv("hour.csv")
+data = pd.read_csv("./hour.csv")
 st.write(data)
 
 hist_values = np.histogram(
