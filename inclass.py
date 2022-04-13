@@ -28,6 +28,8 @@ st.title('Loading & Displaying Data')
 data = pd.read_csv("./hour.csv")
 st.write(data)
 
+space(1)
+
 hist_values = np.histogram(
     data['windspeed'], bins=24)[0]
 
