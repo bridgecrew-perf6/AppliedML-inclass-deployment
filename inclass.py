@@ -5,11 +5,6 @@ import os
 import tarfile
 import urllib
 
-DOWNLOAD_ROOT = "https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset/hour"
-
-data = pd.read_csv("hour.csv")
-data.head()
-
 st.title('In-Class Example - CS5394')
 
 if 'count' not in st.session_state:
