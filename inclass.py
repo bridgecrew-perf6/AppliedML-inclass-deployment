@@ -5,6 +5,8 @@ import numpy as np
 # For comment section, referenced below
 from datetime import datetime
 from utils import db
+COMMENT_TEMPLATE_MD = """{} - {}
+> {}"""
 
 
 # Reference: https://github.com/streamlit/example-app-commenting/blob/main/streamlit_app.py
@@ -43,9 +45,10 @@ space(3)
 
 
 # Reference: https://github.com/streamlit/example-app-commenting
-st.title("Comment Section 💬")
+conn = db.connect()
+comments = db.collect(conn)
 
-st.write("**Comments:**")
+st.title("Comment Section 💬")
 
 for index, entry in enumerate(comments.itertuples()):
     st.markdown(COMMENT_TEMPLATE_MD.format(entry.name, entry.date, entry.comment))
